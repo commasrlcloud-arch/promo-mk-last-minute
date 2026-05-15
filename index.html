@@ -229,8 +229,48 @@
 
         /* PRINT */
         @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm 10mm;
+            }
+
             body { background: #fff; }
-            .page { box-shadow: none; }
+
+            .page {
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            /* Evita che i prodotti vengano tagliati tra una pagina e l'altra */
+            .product {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                -webkit-column-break-inside: avoid;
+            }
+
+            .section-title {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            /* Mantieni colori e sfondi */
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Forza le immagini a stamparsi */
+            .product-img {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Riduci padding per guadagnare spazio su carta */
+            .header { padding: 16px 20px; }
+            .promo-banner { padding: 10px 20px; }
+            .section { padding: 16px 20px 6px; }
+            .footer { padding: 14px 20px; margin-top: 16px; }
+            .divider { margin: 0 20px; }
         }
     </style>
 </head>
@@ -259,7 +299,7 @@
                     <div class="product-desc">Piano Cottura Domino a Gas su Vetroceramica Nera, 38 cm, 1 bruciatore tripla corona 4.2 kW, Classe A</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>100<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
             </div>
             <div class="product">
                 <img class="product-img" src="img_MKHG603101.jpg" alt="MK MKHG 603101-ED TC BK">
@@ -268,7 +308,7 @@
                     <div class="product-desc">Piano Cottura Gas Vetro Nero, 60 cm, 4 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -278,7 +318,7 @@
                     <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>280<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -288,7 +328,7 @@
                     <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona laterale 3.6 kW, Griglie ghisa</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
             </div>
             <div class="product">
                 <img class="product-img" src="img_MKMC603C1.png" alt="MKMC-603C1-PR C BK">
@@ -307,7 +347,7 @@
                     <div class="product-desc">Piano Cottura Gas Vetro Nero, 60 cm, 4 fuochi, Tripla corona, Griglie ghisa, Prime</div>
                     <div class="product-qty">3 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -317,7 +357,7 @@
                     <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Bruciatore tripla corona, Prime</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>95<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -327,7 +367,7 @@
                     <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Controlli frontali, Griglie ferro smaltato</div>
                     <div class="product-qty">52 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>60<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -337,7 +377,7 @@
                     <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Griglie laterali smaltate, 1 tripla corona</div>
                     <div class="product-qty">97 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>55<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -347,7 +387,7 @@
                     <div class="product-desc">Piano Cottura Gas Supreme Line, 60 cm, Vetro nero, Timer, Tripla corona</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>130<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -357,7 +397,7 @@
                     <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
                     <div class="product-qty">40 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>100<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -367,7 +407,7 @@
                     <div class="product-desc">Piano Cottura Gas, 75 cm, 4 fuochi, Tripla corona laterale, Vetro nero</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -377,7 +417,7 @@
                     <div class="product-desc">Piano Cottura Gas, 75 cm, 4 fuochi, Tripla corona, Vetro nero, Prime</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>140<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -387,7 +427,7 @@
                     <div class="product-desc">Piano Cottura Gas Supreme Line, 75 cm, Vetro nero, 5 fuochi, Tripla corona laterale</div>
                     <div class="product-qty">4 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -414,7 +454,7 @@
                     <div class="product-desc">Forno Multifunzione Inox, 9 funzioni, 70L, Classe A, Pirolitico, Sonda carne</div>
                     <div class="product-qty">3 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -424,7 +464,7 @@
                     <div class="product-desc">Forno Multifunzione Inox, 9 funzioni, 70L, Classe A, Pirolitico, Guide telescopiche</div>
                     <div class="product-qty">6 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>250<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -434,7 +474,7 @@
                     <div class="product-desc">Forno Multifunzione Pirolitico Inox, 9 funzioni, 70L, Classe A, Porta 4 vetri</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -444,7 +484,7 @@
                     <div class="product-desc">Forno Multifunzione Pirolitico Inox, Classe A</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -454,7 +494,7 @@
                     <div class="product-desc">Forno Multifunzione Pirolitico Inox/Nero, 9 funzioni, 70L, Classe A, Easy Clean</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -464,7 +504,7 @@
                     <div class="product-desc">Forno Combinato Vapore Vetro Nero, 14 funzioni, 72L, Classe A+, 3 cicli vapore, Touch LED</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>350<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -474,7 +514,7 @@
                     <div class="product-desc">Forno Multifunzione con Microonde e Vapore Vetro Nero, 12 funzioni, 72L, Classe A+, Touch, Sonda carne</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>400<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>500<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -484,7 +524,7 @@
                     <div class="product-desc">Forno Compatto Multifunzione Vetro Nero, 11 funzioni, 50L, Pirolitico, Touch LED, Sonda carne</div>
                     <div class="product-qty">8 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -494,7 +534,7 @@
                     <div class="product-desc">Forno Compatto Combinato a Vapore, 7 programmi, 34L, Classe A, Full Touch</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>400<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -504,7 +544,7 @@
                     <div class="product-desc">Microonde da Incasso con Grill Vetro Nero, 25L, 900W, 5 livelli potenza, Grill 1200W, Touch</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>200<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -514,7 +554,7 @@
                     <div class="product-desc">Microonde da Incasso Pensile Inox, 17L, 700W, 5 livelli potenza, Prime</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>115<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -524,7 +564,7 @@
                     <div class="product-desc">Microonde da Incasso Inox, 20L, 800W, Grill 1000W, 5 livelli, Prime</div>
                     <div class="product-qty">26 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -534,7 +574,7 @@
                     <div class="product-desc">Microonde da Incasso Inox, 25L, 900W, Grill 1200W, Touch, Prime</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -544,17 +584,17 @@
                     <div class="product-desc">Microonde da Incasso Vetro Nero, 25L, 900W, Grill 1200W, Touch, Prime</div>
                     <div class="product-qty">6 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
-                <div class="product-img" style="background:#f0f0f0;"></div>
+                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mko-41-12-ms-bk-oven-midea-italia-618328-rel388ce942.jpg" alt="MKO 41/12 MS BK">
                 <div class="product-info">
                     <div class="product-code">MKO 41/12 MS BK</div>
                     <div class="product-desc">Forno Multifunzione Vetro Nero, 70L, 4 funzioni, Classe A</div>
                     <div class="product-qty">27 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>100<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -564,7 +604,7 @@
                     <div class="product-desc">Forno Multifunzione Inox, 70L, 8 funzioni, Classe A, Pirolitico, Prime</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>125<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -584,7 +624,7 @@
                     <div class="product-desc">Forno Multifunzione Vetro Nero, 65L, 8 funzioni, Easy Clean</div>
                     <div class="product-qty">24 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>110<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -594,7 +634,7 @@
                     <div class="product-desc">Forno Multifunzione Inox, 65L, 8 funzioni, Classe A, Easy Clean</div>
                     <div class="product-qty">54 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>115<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -604,17 +644,17 @@
                     <div class="product-desc">Forno Supreme Line, 72L, Vapore Full, 13 funzioni, Classe A+, Vetro nero</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
-                <div class="product-img" style="background:#f0f0f0;"></div>
+                <img class="product-img" src="https://www.daragonashop.it/wp-content/uploads/2026/03/14421-26605-omk_13k2t_sp_bk.webp" alt="OMK 9K2D SP BK">
                 <div class="product-info">
                     <div class="product-code">OMK 9K2D SP BK</div>
                     <div class="product-desc">Forno Supreme Line, Multifunzione, Vetro nero, Vapore, Classe A+</div>
                     <div class="product-qty">9 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
             </div>
         </div>
 
@@ -631,7 +671,7 @@
                     <div class="product-desc">Cappa da Incasso Inox, 52 cm, 3 velocit&agrave;, 420 m&sup3;/h, 64 dB, Classe C</div>
                     <div class="product-qty">7 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>50<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>40<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -641,7 +681,7 @@
                     <div class="product-desc">Cappa a Camino Inox, 90 cm, 3 velocit&agrave;, 320 m&sup3;/h, 65 dB, Classe B</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>100<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>85<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -661,7 +701,7 @@
                     <div class="product-desc">Cappa a Parete Inox, 60 cm, 3 velocit&agrave;, 400 m&sup3;/h, LED, Classe C</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>90<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -671,7 +711,7 @@
                     <div class="product-desc">Cappa a Parete Inox, 90 cm, 3 velocit&agrave;, 400 m&sup3;/h, LED, Classe C</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>85<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -681,7 +721,7 @@
                     <div class="product-desc">Cappa a Parete Inox/Nero, 60 cm, Touch, 4+1 velocit&agrave;, LED, Classe A</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
             </div>
         </div>
 
@@ -698,7 +738,7 @@
                     <div class="product-desc">Frigorifero Combinato da Incasso, 248L, NoFrost, LED, Classe E</div>
                     <div class="product-qty">5 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -708,7 +748,7 @@
                     <div class="product-desc">Frigorifero Combinato da Incasso, 271L, Statico, LED, Classe E</div>
                     <div class="product-qty">10 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -718,7 +758,7 @@
                     <div class="product-desc">Frigorifero Combinato da Incasso, Statico, LED, Classe E (apertura SX)</div>
                     <div class="product-qty">9 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -728,7 +768,7 @@
                     <div class="product-desc">Frigorifero Combinato da Incasso, 403L, NoFrost, 70 cm, Classe D</div>
                     <div class="product-qty">15 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>375<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -738,7 +778,7 @@
                     <div class="product-desc">Frigorifero Combinato Libera Installazione, 310L, NoFrost, Bianco, Classe E</div>
                     <div class="product-qty">12 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -752,13 +792,13 @@
             </div>
 
             <div class="product">
-                <div class="product-img" style="background:#f0f0f0;"></div>
+                <img class="product-img" src="https://img.edilportale.com/products/mkrf-320i-st-f-refrigerator-midea-italia-614180-rel1cf7355f.jpg" alt="MKRF 240I ST F">
                 <div class="product-info">
                     <div class="product-code">MKRF 240I ST F</div>
                     <div class="product-desc">Frigorifero Doppia Porta da Incasso, Statico, Classe F</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -768,7 +808,7 @@
                     <div class="product-desc">Frigorifero Doppia Porta Libera Installazione, 204L, Statico, Bianco, Classe E</div>
                     <div class="product-qty">56 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -778,7 +818,7 @@
                     <div class="product-desc">Frigorifero Doppia Porta Libera Installazione, 204L, Statico, Inox, Classe E</div>
                     <div class="product-qty">26 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>155<span class="decimals">,00</span></div>
             </div>
         </div>
 
@@ -795,17 +835,17 @@
                     <div class="product-desc">Lavastoviglie da Incasso Supreme Line, 14 coperti, Scomparsa totale, Classe C</div>
                     <div class="product-qty">2 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>275<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
-                <div class="product-img" style="background:#f0f0f0;"></div>
+                <img class="product-img" src="https://ioelettrodomestici.it/338357-large_default/master-kitchen-dmk-14c9-sp-sd-a-scomparsa-totale-14-coperti-c.jpg" alt="DMK 14E8 SP SD">
                 <div class="product-info">
                     <div class="product-code">DMK 14E8 SP SD</div>
                     <div class="product-desc">Lavastoviglie da Incasso Supreme Line, 14 coperti, Wi-Fi, Classe E</div>
                     <div class="product-qty">5 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>250<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -815,7 +855,7 @@
                     <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Scomparsa parziale, Classe E</div>
                     <div class="product-qty">21 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -825,7 +865,7 @@
                     <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Pannellabile, Classe E</div>
                     <div class="product-qty">5 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>160<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -835,7 +875,7 @@
                     <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, 5 programmi, Classe E</div>
                     <div class="product-qty">5 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>225<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -845,7 +885,7 @@
                     <div class="product-desc">Lavastoviglie da Incasso 60 cm, 12 coperti, 5 programmi, Scomparsa, Classe E</div>
                     <div class="product-qty">31 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -855,7 +895,7 @@
                     <div class="product-desc">Lavastoviglie Libera Installazione 60 cm, 12 coperti, Bianco, Classe E</div>
                     <div class="product-qty">6 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>205<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -865,7 +905,7 @@
                     <div class="product-desc">Lavastoviglie Libera Installazione 60 cm, 14 coperti, 7 programmi, Bianco, Classe E</div>
                     <div class="product-qty">15 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>195<span class="decimals">,00</span></div>
             </div>
         </div>
 
@@ -882,7 +922,7 @@
                     <div class="product-desc">Piano a Induzione da Incasso 60 cm, 4 zone flessibili, Vetro nero</div>
                     <div class="product-qty">35 pz disponibili</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -892,7 +932,7 @@
                     <div class="product-desc">Piano a Induzione Supreme Line 60 cm, 2 zone flessibili, Vetro nero</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>270<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -902,7 +942,7 @@
                     <div class="product-desc">Piano a Induzione 60 cm, 4 zone, 2 Bridge, Vetro nero</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -912,7 +952,7 @@
                     <div class="product-desc">Piano a Induzione 60 cm, 4 zone, Vetro nero</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
@@ -922,27 +962,27 @@
                     <div class="product-desc">Piano a Induzione 60 cm, 4 zone, Vetro bianco</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
-                <div class="product-img" style="background:#f0f0f0;"></div>
+                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhi-774-ed-1br-bk-hob-midea-italia-617106-relfcf2b491.png" alt="IHMK 8082B SP BK">
                 <div class="product-info">
                     <div class="product-code">IHMK 8082B SP BK</div>
                     <div class="product-desc">Piano a Induzione Supreme Line 80 cm, Cappa integrata, Vetro nero</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>500<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
-                <div class="product-img" style="background:#f0f0f0;"></div>
+                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhi-774-ed-1br-bk-hob-midea-italia-617106-relfcf2b491.png" alt="IMK 7741BSPBK">
                 <div class="product-info">
                     <div class="product-code">IMK 7741BSPBK</div>
                     <div class="product-desc">Piano a Induzione Supreme Line 80 cm, Vetro nero</div>
                     <div class="product-qty">1 pz disponibile</div>
                 </div>
-                <div class="product-price" style="color:#999;font-size:16px;">—</div>
+                <div class="product-price"><span class="euro">&euro;</span>290<span class="decimals">,00</span></div>
             </div>
         </div>
 

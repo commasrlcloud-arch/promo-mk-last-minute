@@ -60,6 +60,22 @@
             letter-spacing: 1px;
         }
 
+        /* SEPARATORE CATEGORIA */
+        .category-separator {
+            background: #2c3a45;
+            padding: 10px 40px;
+            margin-top: 6px;
+        }
+
+        .category-separator span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            color: rgba(255,255,255,0.85);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
         /* SEZIONI */
         .section {
             padding: 30px 40px 10px;
@@ -89,14 +105,24 @@
             border-left: 4px solid #3d4f5f;
         }
 
-        .product-img {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
+        /* IMMAGINE PRODOTTO */
+        .product-img-wrap {
+            width: 80px;
+            height: 80px;
             border-radius: 6px;
-            margin-right: 14px;
             background: #fff;
             flex-shrink: 0;
+            margin-right: 14px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .product-info {
@@ -189,6 +215,9 @@
             .promo-banner .sub {
                 font-size: 12px;
             }
+            .category-separator {
+                padding: 10px 16px;
+            }
             .section {
                 padding: 20px 16px 10px;
             }
@@ -198,9 +227,9 @@
             .product {
                 padding: 12px 10px;
             }
-            .product-img {
-                width: 60px;
-                height: 60px;
+            .product-img-wrap {
+                width: 65px;
+                height: 65px;
                 margin-right: 10px;
             }
             .product-code {
@@ -241,7 +270,6 @@
                 box-shadow: none;
             }
 
-            /* Evita che i prodotti vengano tagliati tra una pagina e l'altra */
             .product {
                 break-inside: avoid;
                 page-break-inside: avoid;
@@ -253,21 +281,14 @@
                 page-break-after: avoid;
             }
 
-            /* Mantieni colori e sfondi */
             * {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
 
-            /* Forza le immagini a stamparsi */
-            .product-img {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            /* Riduci padding per guadagnare spazio su carta */
             .header { padding: 16px 20px; }
             .promo-banner { padding: 10px 20px; }
+            .category-separator { padding: 8px 20px; }
             .section { padding: 16px 20px 6px; }
             .footer { padding: 14px 20px; margin-top: 16px; }
             .divider { margin: 0 20px; }
@@ -288,12 +309,21 @@
             <div class="sub">Disponibilit&agrave; limitata &mdash; Prezzi riservati</div>
         </div>
 
-        <!-- PIANO COTTURA -->
+        <!-- ============================================================ -->
+        <!-- INCASSO / BUILT-IN                                           -->
+        <!-- ============================================================ -->
+        <div class="category-separator">
+            <span>&#9632;&nbsp;&nbsp;Incasso / Built-in</span>
+        </div>
+
+        <!-- PIANI COTTURA GAS — 38 cm -->
         <div class="section">
-            <div class="section-title">Piano Cottura</div>
+            <div class="section-title">Piano Cottura Gas &mdash; 38 cm</div>
 
             <div class="product">
-                <img class="product-img" src="img_MKHG381.jpg" alt="MKHG 381-EDS FTC GCBK">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHG381.jpg" alt="MKHG 381-EDS FTC GCBK">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKHG 381-EDS FTC GCBK</div>
                     <div class="product-desc">Piano Cottura Domino a Gas su Vetroceramica Nera, 38 cm, 1 bruciatore tripla corona 4.2 kW, Classe A</div>
@@ -301,77 +331,18 @@
                 </div>
                 <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
             </div>
-            <div class="product">
-                <img class="product-img" src="img_MKHG603101.jpg" alt="MK MKHG 603101-ED TC BK">
-                <div class="product-info">
-                    <div class="product-code">MK MKHG 603101-ED TC BK</div>
-                    <div class="product-desc">Piano Cottura Gas Vetro Nero, 60 cm, 4 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
-            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PIANI COTTURA GAS — 60 cm -->
+        <div class="section">
+            <div class="section-title">Piano Cottura Gas &mdash; 60 cm</div>
 
             <div class="product">
-                <img class="product-img" src="img_MKHG7541.jpg" alt="MK MKHG 7541 EDS FTC XS">
-                <div class="product-info">
-                    <div class="product-code">MK MKHG 7541 EDS FTC XS</div>
-                    <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
-                    <div class="product-qty">1 pz disponibile</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mkhg-641l-e-xs-hob-midea-italia-617121-relf2e80843.png" alt="MKHG 6401L E XS">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>280<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKHG754101.jpg" alt="MK MKHG 754101-ED LTC XS">
-                <div class="product-info">
-                    <div class="product-code">MK MKHG 754101-ED LTC XS</div>
-                    <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona laterale 3.6 kW, Griglie ghisa</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
-            </div>
-            <div class="product">
-                <img class="product-img" src="img_MKMC603C1.png" alt="MKMC-603C1-PR C BK">
-                <div class="product-info">
-                    <div class="product-code">MKMC-603C1-PR C BK</div>
-                    <div class="product-desc">Piano Cottura Misto Gas+Elettrico Vetroceramica Nera, 60 cm, 3 fuochi gas + 1 piastra elettrica, Griglie ghisa</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhg-603101-ed-tc-bk-hob-midea-italia-617255-rel77753879.jpg" alt="MKHG 603101-PR TC BK">
-                <div class="product-info">
-                    <div class="product-code">MKHG 603101-PR TC BK</div>
-                    <div class="product-desc">Piano Cottura Gas Vetro Nero, 60 cm, 4 fuochi, Tripla corona, Griglie ghisa, Prime</div>
-                    <div class="product-qty">3 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mkhg-60401-pr-e-xs-hob-midea-italia-617251-rel177fda16.jpg" alt="MKHG 60401-PR E XS">
-                <div class="product-info">
-                    <div class="product-code">MKHG 60401-PR E XS</div>
-                    <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Bruciatore tripla corona, Prime</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>95<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mkhg-60401-pr-e-xs-hob-midea-italia-617251-rel177fda16.jpg" alt="MKHG 6401F E XS">
-                <div class="product-info">
-                    <div class="product-code">MKHG 6401F E XS</div>
-                    <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Controlli frontali, Griglie ferro smaltato</div>
-                    <div class="product-qty">52 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>60<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mkhg-641l-e-xs-hob-midea-italia-617121-relf2e80843.png" alt="MKHG 6401L E XS">
                 <div class="product-info">
                     <div class="product-code">MKHG 6401L E XS</div>
                     <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Griglie laterali smaltate, 1 tripla corona</div>
@@ -381,7 +352,33 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://www.mk-masterkitchen.com/content/dam/masterkitchen-aem/it/piani-cottura/gas/gmk-604-tc-bk/immagini/GMK-604-TC-BK-FRONT-380X243.png" alt="GMK 604TC SP BK">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHG6401FEXS.png" alt="MKHG 6401F E XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHG 6401F E XS</div>
+                    <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Controlli frontali, Griglie ferro smaltato</div>
+                    <div class="product-qty">52 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>60<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mkhg-60401-pr-e-xs-hob-midea-italia-617251-rel177fda16.jpg" alt="MKHG 60401-PR E XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHG 60401-PR E XS</div>
+                    <div class="product-desc">Piano Cottura Gas Inox, 60 cm, 4 fuochi, Bruciatore tripla corona, Prime</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>95<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.mk-masterkitchen.com/content/dam/masterkitchen-aem/it/piani-cottura/gas/gmk-604-tc-bk/immagini/GMK-604-TC-BK-FRONT-380X243.png" alt="GMK 604TC SP BK">
+                </div>
                 <div class="product-info">
                     <div class="product-code">GMK 604TC SP BK</div>
                     <div class="product-desc">Piano Cottura Gas Supreme Line, 60 cm, Vetro nero, Timer, Tripla corona</div>
@@ -391,7 +388,52 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mkhg-75-e-xs-hob-midea-italia-617513-rel8f90c8f.png" alt="MKHG 75 E XS">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKMC603C1.png" alt="MKMC-603C1-PR C BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKMC-603C1-PR C BK</div>
+                    <div class="product-desc">Piano Cottura Misto Gas+Elettrico Vetroceramica Nera, 60 cm, 3 fuochi gas + 1 piastra elettrica, Griglie ghisa</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mkhg-603101-ed-tc-bk-hob-midea-italia-617255-rel77753879.jpg" alt="MKHG 603101-PR TC BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHG 603101-PR TC BK</div>
+                    <div class="product-desc">Piano Cottura Gas Vetro Nero, 60 cm, 4 fuochi, Tripla corona, Griglie ghisa, Prime</div>
+                    <div class="product-qty">3 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHG603101.jpg" alt="MK MKHG 603101-ED TC BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MK MKHG 603101-ED TC BK</div>
+                    <div class="product-desc">Piano Cottura Gas Vetro Nero, 60 cm, 4 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PIANI COTTURA GAS — 75 cm -->
+        <div class="section">
+            <div class="section-title">Piano Cottura Gas &mdash; 75 cm</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mkhg-75-e-xs-hob-midea-italia-617513-rel8f90c8f.png" alt="MKHG 75 E XS">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKHG 75 E XS</div>
                     <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
@@ -401,17 +443,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhg-754101-pr-tc-bk-hob-midea-italia-614370-rele014307.jpg" alt="MKHG 754101-ED L">
-                <div class="product-info">
-                    <div class="product-code">MKHG 754101-ED L</div>
-                    <div class="product-desc">Piano Cottura Gas, 75 cm, 4 fuochi, Tripla corona laterale, Vetro nero</div>
-                    <div class="product-qty">1 pz disponibile</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mkhg-754101-pr-tc-bk-hob-midea-italia-614370-rele014307.jpg" alt="MKHG 754101-PR T">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhg-754101-pr-tc-bk-hob-midea-italia-614370-rele014307.jpg" alt="MKHG 754101-PR T">
                 <div class="product-info">
                     <div class="product-code">MKHG 754101-PR T</div>
                     <div class="product-desc">Piano Cottura Gas, 75 cm, 4 fuochi, Tripla corona, Vetro nero, Prime</div>
@@ -421,7 +455,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://www.mk-masterkitchen.com/content/dam/masterkitchen-aem/it/piani-cottura/gas/gmk-755ltc-t-sp-bk/immagini/GMK-755LTC-T-SP-BK-FRONT-380X243.png" alt="GMK 755LTC T SP">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.mk-masterkitchen.com/content/dam/masterkitchen-aem/it/piani-cottura/gas/gmk-755ltc-t-sp-bk/immagini/GMK-755LTC-T-SP-BK-FRONT-380X243.png" alt="GMK 755LTC T SP">
+                </div>
                 <div class="product-info">
                     <div class="product-code">GMK 755LTC T SP</div>
                     <div class="product-desc">Piano Cottura Gas Supreme Line, 75 cm, Vetro nero, 5 fuochi, Tripla corona laterale</div>
@@ -430,6 +466,139 @@
                 <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
             </div>
 
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mkhg-754101-ed-ltc-bk-hob-midea-italia-614352-rel7fb52740.jpg" alt="MKHG 754101-ED L">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHG 754101-ED L</div>
+                    <div class="product-desc">Piano Cottura Gas, 75 cm, 4 fuochi, Tripla corona laterale, Vetro nero</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHG754101.jpg" alt="MK MKHG 754101-ED LTC XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MK MKHG 754101-ED LTC XS</div>
+                    <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona laterale 3.6 kW, Griglie ghisa</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHG7541.jpg" alt="MK MKHG 7541 EDS FTC XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MK MKHG 7541 EDS FTC XS</div>
+                    <div class="product-desc">Piano Cottura Gas Inox, 75 cm, 5 fuochi, Tripla corona 3.6 kW, Griglie ghisa</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>280<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PIANI COTTURA INDUZIONE — 60 cm -->
+        <div class="section">
+            <div class="section-title">Piano Cottura Induzione &mdash; 60 cm</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://jhappliance.co.nz/cdn/shop/files/MC-IF7454AJ1-A_800x.png?v=1713225899" alt="MC-IF7454AJ1-A">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MC-IF7454AJ1-A</div>
+                    <div class="product-desc">Piano a Induzione da Incasso 60 cm, 4 zone flessibili, Vetro nero</div>
+                    <div class="product-qty">35 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mkhi-604-ed-bk-hob-midea-italia-617105-rele240e070.png" alt="MKHI 604 BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHI 604 BK</div>
+                    <div class="product-desc">Piano a Induzione 60 cm, 4 zone, Vetro nero</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mkhi-604-wh-hob-midea-italia-614216-reld567d5ea.jpg" alt="MKHI 604 WH">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHI 604 WH</div>
+                    <div class="product-desc">Piano a Induzione 60 cm, 4 zone, Vetro bianco</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_IMK6042BSPBK.png" alt="IMK 6042B SP BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">IMK 6042B SP BK</div>
+                    <div class="product-desc">Piano a Induzione Supreme Line 60 cm, 2 zone flessibili, Vetro nero</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>270<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_MKHI-6014-ED-2BR-BK-Hob-Master-Kitchen-614197-relddaf151.jpg" alt="MKHI 604 2BR BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHI 604 2BR BK</div>
+                    <div class="product-desc">Piano a Induzione 60 cm, 4 zone, 2 Bridge, Vetro nero</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PIANI COTTURA INDUZIONE — 80 cm -->
+        <div class="section">
+            <div class="section-title">Piano Cottura Induzione &mdash; 80 cm</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_IMK7741BSPBK.png" alt="IMK 7741BSPBK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">IMK 7741BSPBK</div>
+                    <div class="product-desc">Piano a Induzione Supreme Line 80 cm, Vetro nero</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>290<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://diselsrl.it/wp-content/uploads/2025/05/IHMK-8082B-SP-BK.jpg" alt="IHMK 8082B SP BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">IHMK 8082B SP BK</div>
+                    <div class="product-desc">Piano a Induzione Supreme Line 80 cm, Cappa integrata, Vetro nero</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>500<span class="decimals">,00</span></div>
+            </div>
         </div>
 
         <div class="divider"></div>
@@ -439,147 +608,9 @@
             <div class="section-title">Forni da Incasso</div>
 
             <div class="product">
-                <img class="product-img" src="img_MKO902.jpg" alt="MKO 902-PR M XS">
-                <div class="product-info">
-                    <div class="product-code">MKO 902-PR M XS</div>
-                    <div class="product-desc">Forno Multifunzione Inox, 9 funzioni, 70L, Classe A, Pirolitico, Sonda carne</div>
-                    <div class="product-qty">3 pz disponibili</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mko-41-12-ms-bk-oven-midea-italia-618328-rel388ce942.jpg" alt="MKO 41/12 MS BK">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO906.jpg" alt="MKO 906-PR M XS">
-                <div class="product-info">
-                    <div class="product-code">MKO 906-PR M XS</div>
-                    <div class="product-desc">Forno Multifunzione Inox, 9 funzioni, 70L, Classe A, Pirolitico, Guide telescopiche</div>
-                    <div class="product-qty">6 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>250<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO1006.jpg" alt="MKO 1006-PR M P XS">
-                <div class="product-info">
-                    <div class="product-code">MKO 1006-PR M P XS</div>
-                    <div class="product-desc">Forno Multifunzione Pirolitico Inox, 9 funzioni, 70L, Classe A, Porta 4 vetri</div>
-                    <div class="product-qty">2 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO9312.jpg" alt="MKO 93/12 M P XS">
-                <div class="product-info">
-                    <div class="product-code">MKO 93/12 M P XS</div>
-                    <div class="product-desc">Forno Multifunzione Pirolitico Inox, Classe A</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO908.jpg" alt="MKO 908-PR MXS/BK">
-                <div class="product-info">
-                    <div class="product-code">MKO 908-PR MXS/BK</div>
-                    <div class="product-desc">Forno Multifunzione Pirolitico Inox/Nero, 9 funzioni, 70L, Classe A, Easy Clean</div>
-                    <div class="product-qty">2 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO1309.jpg" alt="MKO 1309-ED CS BK">
-                <div class="product-info">
-                    <div class="product-code">MKO 1309-ED CS BK</div>
-                    <div class="product-desc">Forno Combinato Vapore Vetro Nero, 14 funzioni, 72L, Classe A+, 3 cicli vapore, Touch LED</div>
-                    <div class="product-qty">2 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>350<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO1307.png" alt="MKO 1307-ED MMW BK">
-                <div class="product-info">
-                    <div class="product-code">MKO 1307-ED MMW BK</div>
-                    <div class="product-desc">Forno Multifunzione con Microonde e Vapore Vetro Nero, 12 funzioni, 72L, Classe A+, Touch, Sonda carne</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>500<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO45509.jpg" alt="MKO 45509-ED BK">
-                <div class="product-info">
-                    <div class="product-code">MKO 45509-ED BK</div>
-                    <div class="product-desc">Forno Compatto Multifunzione Vetro Nero, 11 funzioni, 50L, Pirolitico, Touch LED, Sonda carne</div>
-                    <div class="product-qty">8 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKO45348CS.jpg" alt="MKO 45348CS-PR XS">
-                <div class="product-info">
-                    <div class="product-code">MKO 45348CS-PR XS</div>
-                    <div class="product-desc">Forno Compatto Combinato a Vapore, 7 programmi, 34L, Classe A, Full Touch</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>400<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="img_MKMW3825.jpg" alt="MKMW 3825-EDBK">
-                <div class="product-info">
-                    <div class="product-code">MKMW 3825-ED BK</div>
-                    <div class="product-desc">Microonde da Incasso con Grill Vetro Nero, 25L, 900W, 5 livelli potenza, Grill 1200W, Touch</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.opportunitycommerce.com/145452-large_default/master-kitchen-microonde-ad-incasso-per-pensile-mkmw-3817-pr-xs-finitura-inox-da-60-cm.jpg" alt="MKMW 3817-PR XS">
-                <div class="product-info">
-                    <div class="product-code">MKMW 3817-PR XS</div>
-                    <div class="product-desc">Microonde da Incasso Pensile Inox, 17L, 700W, 5 livelli potenza, Prime</div>
-                    <div class="product-qty">2 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>115<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_MKMW-3820-PR-XS-Microwave-oven-Master-Kitchen-613943-relf6c14464.jpg" alt="MKMW 3820-PR XS">
-                <div class="product-info">
-                    <div class="product-code">MKMW 3820-PR XS</div>
-                    <div class="product-desc">Microonde da Incasso Inox, 20L, 800W, Grill 1000W, 5 livelli, Prime</div>
-                    <div class="product-qty">26 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_MKMW-3825-PR-XS-Microwave-oven-Master-Kitchen-613941-rel45a11bee.jpg" alt="MKMW 3825-PR XS">
-                <div class="product-info">
-                    <div class="product-code">MKMW 3825-PR XS</div>
-                    <div class="product-desc">Microonde da Incasso Inox, 25L, 900W, Grill 1200W, Touch, Prime</div>
-                    <div class="product-qty">2 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_MKMW-3825-PR-BK-Microwave-oven-Master-Kitchen-613940-reld7c17e49.jpg" alt="MKMW 3825-PR BK">
-                <div class="product-info">
-                    <div class="product-code">MKMW 3825-PR BK</div>
-                    <div class="product-desc">Microonde da Incasso Vetro Nero, 25L, 900W, Grill 1200W, Touch, Prime</div>
-                    <div class="product-qty">6 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mko-41-12-ms-bk-oven-midea-italia-618328-rel388ce942.jpg" alt="MKO 41/12 MS BK">
                 <div class="product-info">
                     <div class="product-code">MKO 41/12 MS BK</div>
                     <div class="product-desc">Forno Multifunzione Vetro Nero, 70L, 4 funzioni, Classe A</div>
@@ -589,17 +620,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mko-802-12-pr-ms-xs-oven-midea-italia-614952-relde776e0a.jpg" alt="MKO 802-PR MS XS">
-                <div class="product-info">
-                    <div class="product-code">MKO 802-PR MS XS</div>
-                    <div class="product-desc">Forno Multifunzione Inox, 70L, 8 funzioni, Classe A, Pirolitico, Prime</div>
-                    <div class="product-qty">1 pz disponibile</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mko-82-12-m-bk-oven-midea-italia-618327-rel6aa8f8a6.jpg" alt="MKO 82/12 M BK">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>125<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mko-82-12-m-bk-oven-midea-italia-618327-rel6aa8f8a6.jpg" alt="MKO 82/12 M BK">
                 <div class="product-info">
                     <div class="product-code">MKO 82/12 M BK</div>
                     <div class="product-desc">Forno Multifunzione Vetro Nero, 65L, 8 funzioni, Easy Clean</div>
@@ -609,7 +632,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mko-82-12-ms-xs-oven-midea-italia-618326-rel5ad022a.jpg" alt="MKO 82/12 MS XS">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mko-82-12-ms-xs-oven-midea-italia-618326-rel5ad022a.jpg" alt="MKO 82/12 MS XS">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKO 82/12 MS XS</div>
                     <div class="product-desc">Forno Multifunzione Inox, 65L, 8 funzioni, Classe A, Easy Clean</div>
@@ -619,7 +644,57 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://www.daragonashop.it/wp-content/uploads/2026/03/14421-26605-omk_13k2t_sp_bk.webp" alt="OMK 13K2T SP BK">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mko-802-12-pr-ms-xs-oven-midea-italia-614952-relde776e0a.jpg" alt="MKO 802-PR MS XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 802-PR MS XS</div>
+                    <div class="product-desc">Forno Multifunzione Inox, 70L, 8 funzioni, Classe A, Pirolitico, Prime</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>125<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.mk-masterkitchen.com/content/dam/masterkitchen-aem/it/forni/omk-9k2d-sp-bk/immagini/OMK-9K2D-SP-BK-FRONT-380X243.png" alt="OMK 9K2D SP BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">OMK 9K2D SP BK</div>
+                    <div class="product-desc">Forno Supreme Line, Multifunzione, Vetro nero, Vapore, Classe A+</div>
+                    <div class="product-qty">9 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO902.jpg" alt="MKO 902-PR M XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 902-PR M XS</div>
+                    <div class="product-desc">Forno Multifunzione Inox, 9 funzioni, 70L, Classe A, Pirolitico, Sonda carne</div>
+                    <div class="product-qty">3 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO908.jpg" alt="MKO 908-PR MXS/BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 908-PR MXS/BK</div>
+                    <div class="product-desc">Forno Multifunzione Pirolitico Inox/Nero, 9 funzioni, 70L, Classe A, Easy Clean</div>
+                    <div class="product-qty">2 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.daragonashop.it/wp-content/uploads/2026/03/14421-26605-omk_13k2t_sp_bk.webp" alt="OMK 13K2T SP BK">
+                </div>
                 <div class="product-info">
                     <div class="product-code">OMK 13K2T SP BK</div>
                     <div class="product-desc">Forno Supreme Line, 72L, Vapore Full, 13 funzioni, Classe A+, Vetro nero</div>
@@ -629,13 +704,307 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://www.daragonashop.it/wp-content/uploads/2026/03/14421-26605-omk_13k2t_sp_bk.webp" alt="OMK 9K2D SP BK">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO906.jpg" alt="MKO 906-PR M XS">
+                </div>
                 <div class="product-info">
-                    <div class="product-code">OMK 9K2D SP BK</div>
-                    <div class="product-desc">Forno Supreme Line, Multifunzione, Vetro nero, Vapore, Classe A+</div>
-                    <div class="product-qty">9 pz disponibili</div>
+                    <div class="product-code">MKO 906-PR M XS</div>
+                    <div class="product-desc">Forno Multifunzione Inox, 9 funzioni, 70L, Classe A, Pirolitico, Guide telescopiche</div>
+                    <div class="product-qty">6 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>250<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO9312.jpg" alt="MKO 93/12 M P XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 93/12 M P XS</div>
+                    <div class="product-desc">Forno Multifunzione Pirolitico Inox, Classe A</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO1006.jpg" alt="MKO 1006-PR M P XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 1006-PR M P XS</div>
+                    <div class="product-desc">Forno Multifunzione Pirolitico Inox, 9 funzioni, 70L, Classe A, Porta 4 vetri</div>
+                    <div class="product-qty">2 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO1309.jpg" alt="MKO 1309-ED CS BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 1309-ED CS BK</div>
+                    <div class="product-desc">Forno Combinato Vapore Vetro Nero, 14 funzioni, 72L, Classe A+, 3 cicli vapore, Touch LED</div>
+                    <div class="product-qty">2 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>350<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO1307.png" alt="MKO 1307-ED MMW BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 1307-ED MMW BK</div>
+                    <div class="product-desc">Forno Multifunzione con Microonde e Vapore Vetro Nero, 12 funzioni, 72L, Classe A+, Touch, Sonda carne</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>500<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FORNI COMPATTI 45 cm -->
+        <div class="section">
+            <div class="section-title">Forni Compatti &mdash; 45 cm</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO45509.jpg" alt="MKO 45509-ED BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 45509-ED BK</div>
+                    <div class="product-desc">Forno Compatto Multifunzione Vetro Nero, 11 funzioni, 50L, Pirolitico, Touch LED, Sonda carne</div>
+                    <div class="product-qty">8 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKO45348CS.jpg" alt="MKO 45348CS-PR XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKO 45348CS-PR XS</div>
+                    <div class="product-desc">Forno Compatto Combinato a Vapore, 7 programmi, 34L, Classe A, Full Touch</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>400<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- MICROONDE DA INCASSO -->
+        <div class="section">
+            <div class="section-title">Microonde da Incasso</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" style="transform:scale(1.6)" src="https://www.opportunitycommerce.com/145452-large_default/master-kitchen-microonde-ad-incasso-per-pensile-mkmw-3817-pr-xs-finitura-inox-da-60-cm.jpg" alt="MKMW 3817-PR XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKMW 3817-PR XS</div>
+                    <div class="product-desc">Microonde da Incasso Pensile Inox, 17L, 700W, 5 livelli potenza, Prime</div>
+                    <div class="product-qty">2 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>115<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_MKMW-3820-PR-XS-Microwave-oven-Master-Kitchen-613943-relf6c14464.jpg" alt="MKMW 3820-PR XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKMW 3820-PR XS</div>
+                    <div class="product-desc">Microonde da Incasso Inox, 20L, 800W, Grill 1000W, 5 livelli, Prime</div>
+                    <div class="product-qty">26 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_MKMW-3825-PR-BK-Microwave-oven-Master-Kitchen-613940-reld7c17e49.jpg" alt="MKMW 3825-PR BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKMW 3825-PR BK</div>
+                    <div class="product-desc">Microonde da Incasso Vetro Nero, 25L, 900W, Grill 1200W, Touch, Prime</div>
+                    <div class="product-qty">6 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_MKMW-3825-PR-XS-Microwave-oven-Master-Kitchen-613941-rel45a11bee.jpg" alt="MKMW 3825-PR XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKMW 3825-PR XS</div>
+                    <div class="product-desc">Microonde da Incasso Inox, 25L, 900W, Grill 1200W, Touch, Prime</div>
+                    <div class="product-qty">2 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKMW3825.jpg" alt="MKMW 3825-ED BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKMW 3825-ED BK</div>
+                    <div class="product-desc">Microonde da Incasso con Grill Vetro Nero, 25L, 900W, 5 livelli potenza, Grill 1200W, Touch</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- LAVAGGIO DA INCASSO -->
+        <div class="section">
+            <div class="section-title">Lavastoviglie da Incasso</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKDWFI6512ESE.png" alt="MKDW FI6512 ES E">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKDW FI6512 ES E</div>
+                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 12 coperti, 5 programmi, Scomparsa, Classe E</div>
+                    <div class="product-qty">31 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mkdw-fi60514-ep-e-dishwasher-midea-italia-614379-rel4f074c32.jpg" alt="MKDW FI60514 EPE">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKDW FI60514 EPE</div>
+                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Pannellabile, Classe E</div>
+                    <div class="product-qty">5 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>160<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mkdw-fi60514-esl-e-dishwasher-midea-italia-614376-rel2007c6af.jpg" alt="MKDW FI60514 ESL">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKDW FI60514 ESL</div>
+                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Scomparsa parziale, Classe E</div>
+                    <div class="product-qty">21 pz disponibili</div>
                 </div>
                 <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/MKDWFI605314ESLE.jpg" alt="MKDW FI605314 E">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKDW FI605314 E</div>
+                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, 5 programmi, Classe E</div>
+                    <div class="product-qty">5 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>225<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_DMK14E8SPSD.png" alt="DMK 14E8 SP SD">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">DMK 14E8 SP SD</div>
+                    <div class="product-desc">Lavastoviglie da Incasso Supreme Line, 14 coperti, Wi-Fi, Classe E</div>
+                    <div class="product-qty">5 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>250<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://ioelettrodomestici.it/338357-large_default/master-kitchen-dmk-14c9-sp-sd-a-scomparsa-totale-14-coperti-c.jpg" alt="DMK 14C9 SP SD">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">DMK 14C9 SP SD</div>
+                    <div class="product-desc">Lavastoviglie da Incasso Supreme Line, 14 coperti, Scomparsa totale, Classe C</div>
+                    <div class="product-qty">2 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>275<span class="decimals">,00</span></div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FREDDO DA INCASSO -->
+        <div class="section">
+            <div class="section-title">Frigoriferi da Incasso</div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/products/mkrf-320i-st-f-refrigerator-midea-italia-614180-rel1cf7355f.jpg" alt="MKRF 240I ST F">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKRF 240I ST F</div>
+                    <div class="product-desc">Frigorifero Doppia Porta da Incasso, Statico, Classe F</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKRF320ISTE.png" alt="MKRF 320I ST E">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKRF 320I ST E</div>
+                    <div class="product-desc">Frigorifero Combinato da Incasso, 271L, Statico, LED, Classe E</div>
+                    <div class="product-qty">10 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKRF320ISTES.png" alt="MKRF 320I ST E S">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKRF 320I ST E S</div>
+                    <div class="product-desc">Frigorifero Combinato da Incasso, Statico, LED, Classe E (apertura SX)</div>
+                    <div class="product-qty">9 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_a-Master-Kitchen-613944-relb8249493.jpg" alt="MKRF 320I NF E">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKRF 320I NF E</div>
+                    <div class="product-desc">Frigorifero Combinato da Incasso, 248L, NoFrost, LED, Classe E</div>
+                    <div class="product-qty">5 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.ergman-net.com/resized/1000x0/279106618cebe38a33e3f4b6e90dc8d7.JPG" alt="MKRF 400 NF D">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKRF 400 NF D</div>
+                    <div class="product-desc">Frigorifero Combinato da Incasso, 403L, NoFrost, 70 cm, Classe D</div>
+                    <div class="product-qty">15 pz disponibili</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>375<span class="decimals">,00</span></div>
             </div>
         </div>
 
@@ -646,7 +1015,9 @@
             <div class="section-title">Cappe Aspiranti</div>
 
             <div class="product">
-                <img class="product-img" src="img_MKHDBI5203.png" alt="MKHD BI5203 XS">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHDBI5203.png" alt="MKHD BI5203 XS">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKHD BI5203 XS</div>
                     <div class="product-desc">Cappa da Incasso Inox, 52 cm, 3 velocit&agrave;, 420 m&sup3;/h, 64 dB, Classe C</div>
@@ -656,7 +1027,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="img_MKHDC903.jpg" alt="MKHD C903 XS">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHDC903.jpg" alt="MKHD C903 XS">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKHD C903 XS</div>
                     <div class="product-desc">Cappa a Camino Inox, 90 cm, 3 velocit&agrave;, 320 m&sup3;/h, 65 dB, Classe B</div>
@@ -666,27 +1039,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="img_MKHDT6081.png" alt="MKHD T6081-ED Touch XS/BK">
-                <div class="product-info">
-                    <div class="product-code">MKHD T6081-ED Touch XS/BK</div>
-                    <div class="product-desc">Cappa a T Inox/Vetro Nero, 60 cm, 4+1 velocit&agrave;, 800 m&sup3;/h, Touch, Classe A</div>
-                    <div class="product-qty">1 pz disponibile</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/products/MKHD-T903-XS-Cooker-hood-Master-Kitchen-613779-rel1e5a37d5.jpg" alt="MKHD T903 XS">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/8af3193d6f6cf13e372d7815a67a68e4.jpg" alt="MKHD T603 XS">
-                <div class="product-info">
-                    <div class="product-code">MKHD T603 XS</div>
-                    <div class="product-desc">Cappa a Parete Inox, 60 cm, 3 velocit&agrave;, 400 m&sup3;/h, LED, Classe C</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>90<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/products/MKHD-T903-XS-Cooker-hood-Master-Kitchen-613779-rel1e5a37d5.jpg" alt="MKHD T903 XS">
                 <div class="product-info">
                     <div class="product-code">MKHD T903 XS</div>
                     <div class="product-desc">Cappa a Parete Inox, 90 cm, 3 velocit&agrave;, 400 m&sup3;/h, LED, Classe C</div>
@@ -696,7 +1051,33 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhd-t6081-ed-touch-xs-bk-cooker-hood-midea-italia-617521-relca3c28f7.png" alt="MKHD T608-ED TOUCH BK/XS">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/8af3193d6f6cf13e372d7815a67a68e4.jpg" alt="MKHD T603 XS">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHD T603 XS</div>
+                    <div class="product-desc">Cappa a Parete Inox, 60 cm, 3 velocit&agrave;, 400 m&sup3;/h, LED, Classe C</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>90<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKHDT6081.png" alt="MKHD T6081-ED Touch XS/BK">
+                </div>
+                <div class="product-info">
+                    <div class="product-code">MKHD T6081-ED Touch XS/BK</div>
+                    <div class="product-desc">Cappa a T Inox/Vetro Nero, 60 cm, 4+1 velocit&agrave;, 800 m&sup3;/h, Touch, Classe A</div>
+                    <div class="product-qty">1 pz disponibile</div>
+                </div>
+                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
+            </div>
+
+            <div class="product">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/h_mkhd-t6081-ed-touch-xs-bk-cooker-hood-midea-italia-617521-relca3c28f7.png" alt="MKHD T608-ED TOUCH BK/XS">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKHD T608-ED TOUCH BK/XS</div>
                     <div class="product-desc">Cappa a Parete Inox/Nero, 60 cm, Touch, 4+1 velocit&agrave;, LED, Classe A</div>
@@ -706,74 +1087,52 @@
             </div>
         </div>
 
-        <div class="divider"></div>
+        <!-- ============================================================ -->
+        <!-- FREESTANDING / LIBERA INSTALLAZIONE                          -->
+        <!-- ============================================================ -->
+        <div class="category-separator">
+            <span>&#9632;&nbsp;&nbsp;Freestanding / Libera Installazione</span>
+        </div>
 
-        <!-- FRIGORIFERI -->
+        <!-- LAVAGGIO FREESTANDING -->
         <div class="section">
-            <div class="section-title">Frigoriferi</div>
+            <div class="section-title">Lavastoviglie Libera Installazione</div>
 
             <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_a-Master-Kitchen-613944-relb8249493.jpg" alt="MKRF 320I NF E">
-                <div class="product-info">
-                    <div class="product-code">MKRF 320I NF E</div>
-                    <div class="product-desc">Frigorifero Combinato da Incasso, 248L, NoFrost, LED, Classe E</div>
-                    <div class="product-qty">5 pz disponibili</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://img.edilportale.com/product-thumbs/b_mkdw-fs607014-e-wh-e-dishwasher-midea-italia-616602-relfe010867.jpg" alt="MKDW FS607014 E">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>240<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.vepor.it/foto/prodotti/4081_MK-6a018a3843507-20260511075016.jpg" alt="MKRF 320I ST E">
                 <div class="product-info">
-                    <div class="product-code">MKRF 320I ST E</div>
-                    <div class="product-desc">Frigorifero Combinato da Incasso, 271L, Statico, LED, Classe E</div>
-                    <div class="product-qty">10 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.vepor.it/foto/prodotti/4081_MK-6a018a3843507-20260511075016.jpg" alt="MKRF 320I ST E S">
-                <div class="product-info">
-                    <div class="product-code">MKRF 320I ST E S</div>
-                    <div class="product-desc">Frigorifero Combinato da Incasso, Statico, LED, Classe E (apertura SX)</div>
-                    <div class="product-qty">9 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>210<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.ergman-net.com/resized/1000x0/279106618cebe38a33e3f4b6e90dc8d7.JPG" alt="MKRF 400 NF D">
-                <div class="product-info">
-                    <div class="product-code">MKRF 400 NF D</div>
-                    <div class="product-desc">Frigorifero Combinato da Incasso, 403L, NoFrost, 70 cm, Classe D</div>
+                    <div class="product-code">MKDW FS607014 E</div>
+                    <div class="product-desc">Lavastoviglie Libera Installazione 60 cm, 14 coperti, 7 programmi, Bianco, Classe E</div>
                     <div class="product-qty">15 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>375<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>195<span class="decimals">,00</span></div>
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/561827ecc0e2ce598ae46a32e1a1fccc.jpg" alt="MKRF 301C E NF W">
-                <div class="product-info">
-                    <div class="product-code">MKRF 301C E NF W</div>
-                    <div class="product-desc">Frigorifero Combinato Libera Installazione, 310L, NoFrost, Bianco, Classe E</div>
-                    <div class="product-qty">12 pz disponibili</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://m.media-amazon.com/images/I/51MXDXD0v2L._AC_SX342_SY445_QL70_ML2_.jpg" alt="MFD60S121W-IT">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/products/mkrf-320i-st-f-refrigerator-midea-italia-614180-rel1cf7355f.jpg" alt="MKRF 240I ST F">
                 <div class="product-info">
-                    <div class="product-code">MKRF 240I ST F</div>
-                    <div class="product-desc">Frigorifero Doppia Porta da Incasso, Statico, Classe F</div>
-                    <div class="product-qty">1 pz disponibile</div>
+                    <div class="product-code">MFD60S121W-IT</div>
+                    <div class="product-desc">Lavastoviglie Libera Installazione 60 cm, 12 coperti, Bianco, Classe E</div>
+                    <div class="product-qty">6 pz disponibili</div>
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
+                <div class="product-price"><span class="euro">&euro;</span>205<span class="decimals">,00</span></div>
             </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FREDDO FREESTANDING -->
+        <div class="section">
+            <div class="section-title">Frigoriferi Libera Installazione</div>
 
             <div class="product">
-                <img class="product-img" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/h_mkrf-240d55-st-e-wh-refrigerator-midea-italia-617515-relffa30f21.jpg" alt="MKRF 241D55 E ST WH">
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/h_mkrf-240d55-st-e-wh-refrigerator-midea-italia-617515-relffa30f21.jpg" alt="MKRF 241D55 E ST WH">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKRF 241D55 E ST WH</div>
                     <div class="product-desc">Frigorifero Doppia Porta Libera Installazione, 204L, Statico, Bianco, Classe E</div>
@@ -783,7 +1142,9 @@
             </div>
 
             <div class="product">
-                <img class="product-img" src="https://www.vepor.it/foto/prodotti/4087_MK-69e3587b66ab8-20260418101003.jpg" alt="MKRF 241D55 E ST XS">
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img_MKRF241D55ESTXS.png" alt="MKRF 241D55 E ST XS">
+                </div>
                 <div class="product-info">
                     <div class="product-code">MKRF 241D55 E ST XS</div>
                     <div class="product-desc">Frigorifero Doppia Porta Libera Installazione, 204L, Statico, Inox, Classe E</div>
@@ -791,169 +1152,17 @@
                 </div>
                 <div class="product-price"><span class="euro">&euro;</span>155<span class="decimals">,00</span></div>
             </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- LAVASTOVIGLIE -->
-        <div class="section">
-            <div class="section-title">Lavastoviglie</div>
 
             <div class="product">
-                <img class="product-img" src="https://ioelettrodomestici.it/338357-large_default/master-kitchen-dmk-14c9-sp-sd-a-scomparsa-totale-14-coperti-c.jpg" alt="DMK 14C9 SP SD">
-                <div class="product-info">
-                    <div class="product-code">DMK 14C9 SP SD</div>
-                    <div class="product-desc">Lavastoviglie da Incasso Supreme Line, 14 coperti, Scomparsa totale, Classe C</div>
-                    <div class="product-qty">2 pz disponibili</div>
+                <div class="product-img-wrap">
+                    <img class="product-img zoom" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/561827ecc0e2ce598ae46a32e1a1fccc.jpg" alt="MKRF 301C E NF W">
                 </div>
-                <div class="product-price"><span class="euro">&euro;</span>275<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://ioelettrodomestici.it/338357-large_default/master-kitchen-dmk-14c9-sp-sd-a-scomparsa-totale-14-coperti-c.jpg" alt="DMK 14E8 SP SD">
                 <div class="product-info">
-                    <div class="product-code">DMK 14E8 SP SD</div>
-                    <div class="product-desc">Lavastoviglie da Incasso Supreme Line, 14 coperti, Wi-Fi, Classe E</div>
-                    <div class="product-qty">5 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>250<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkdw-fi60514-esl-e-dishwasher-midea-italia-614376-rel2007c6af.jpg" alt="MKDW FI60514 ESL">
-                <div class="product-info">
-                    <div class="product-code">MKDW FI60514 ESL</div>
-                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Scomparsa parziale, Classe E</div>
-                    <div class="product-qty">21 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkdw-fi60514-ep-e-dishwasher-midea-italia-614379-rel4f074c32.jpg" alt="MKDW FI60514 EPE">
-                <div class="product-info">
-                    <div class="product-code">MKDW FI60514 EPE</div>
-                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Pannellabile, Classe E</div>
-                    <div class="product-qty">5 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>160<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.dibelloelettrodomestici.it/wp-content/uploads/2024/05/MKDWFI605314ESLE.jpg" alt="MKDW FI605314 E">
-                <div class="product-info">
-                    <div class="product-code">MKDW FI605314 E</div>
-                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, 5 programmi, Classe E</div>
-                    <div class="product-qty">5 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>225<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.vepor.it/foto/prodotti/4053_MK-69f8afc5c568e-20260504144005.jpg" alt="MKDW FI6512 ES E">
-                <div class="product-info">
-                    <div class="product-code">MKDW FI6512 ES E</div>
-                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 12 coperti, 5 programmi, Scomparsa, Classe E</div>
-                    <div class="product-qty">31 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://m.media-amazon.com/images/I/51MXDXD0v2L._AC_SX342_SY445_QL70_ML2_.jpg" alt="MFD60S121W-IT">
-                <div class="product-info">
-                    <div class="product-code">MFD60S121W-IT</div>
-                    <div class="product-desc">Lavastoviglie Libera Installazione 60 cm, 12 coperti, Bianco, Classe E</div>
-                    <div class="product-qty">6 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>205<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mkdw-fs607014-e-wh-e-dishwasher-midea-italia-616602-relfe010867.jpg" alt="MKDW FS607014 E">
-                <div class="product-info">
-                    <div class="product-code">MKDW FS607014 E</div>
-                    <div class="product-desc">Lavastoviglie Libera Installazione 60 cm, 14 coperti, 7 programmi, Bianco, Classe E</div>
-                    <div class="product-qty">15 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>195<span class="decimals">,00</span></div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- PIANO COTTURA A INDUZIONE -->
-        <div class="section">
-            <div class="section-title">Piano Cottura a Induzione</div>
-
-            <div class="product">
-                <img class="product-img" src="https://jhappliance.co.nz/cdn/shop/files/MC-IF7454AJ1-A_800x.png?v=1713225899" alt="MC-IF7454AJ1-A">
-                <div class="product-info">
-                    <div class="product-code">MC-IF7454AJ1-A</div>
-                    <div class="product-desc">Piano a Induzione da Incasso 60 cm, 4 zone flessibili, Vetro nero</div>
-                    <div class="product-qty">35 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>120<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://www.vepor.it/foto/prodotti/4084_MK-6a03407ec63eb-20260512150014.jpg" alt="IMK 6042B SP BK">
-                <div class="product-info">
-                    <div class="product-code">IMK 6042B SP BK</div>
-                    <div class="product-desc">Piano a Induzione Supreme Line 60 cm, 2 zone flessibili, Vetro nero</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>270<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_MKHI-6014-ED-2BR-BK-Hob-Master-Kitchen-614197-relddaf151.jpg" alt="MKHI 604 2BR BK">
-                <div class="product-info">
-                    <div class="product-code">MKHI 604 2BR BK</div>
-                    <div class="product-desc">Piano a Induzione 60 cm, 4 zone, 2 Bridge, Vetro nero</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>300<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/b_mkhi-604-ed-bk-hob-midea-italia-617105-rele240e070.png" alt="MKHI 604 BK">
-                <div class="product-info">
-                    <div class="product-code">MKHI 604 BK</div>
-                    <div class="product-desc">Piano a Induzione 60 cm, 4 zone, Vetro nero</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>150<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhi-604-wh-hob-midea-italia-614216-reld567d5ea.jpg" alt="MKHI 604 WH">
-                <div class="product-info">
-                    <div class="product-code">MKHI 604 WH</div>
-                    <div class="product-desc">Piano a Induzione 60 cm, 4 zone, Vetro bianco</div>
-                    <div class="product-qty">1 pz disponibile</div>
+                    <div class="product-code">MKRF 301C E NF W</div>
+                    <div class="product-desc">Frigorifero Combinato Libera Installazione, 310L, NoFrost, Bianco, Classe E</div>
+                    <div class="product-qty">12 pz disponibili</div>
                 </div>
                 <div class="product-price"><span class="euro">&euro;</span>220<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhi-774-ed-1br-bk-hob-midea-italia-617106-relfcf2b491.png" alt="IHMK 8082B SP BK">
-                <div class="product-info">
-                    <div class="product-code">IHMK 8082B SP BK</div>
-                    <div class="product-desc">Piano a Induzione Supreme Line 80 cm, Cappa integrata, Vetro nero</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>500<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <img class="product-img" src="https://img.edilportale.com/product-thumbs/h_mkhi-774-ed-1br-bk-hob-midea-italia-617106-relfcf2b491.png" alt="IMK 7741BSPBK">
-                <div class="product-info">
-                    <div class="product-code">IMK 7741BSPBK</div>
-                    <div class="product-desc">Piano a Induzione Supreme Line 80 cm, Vetro nero</div>
-                    <div class="product-qty">1 pz disponibile</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>290<span class="decimals">,00</span></div>
             </div>
         </div>
 

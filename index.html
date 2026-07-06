@@ -292,6 +292,26 @@
             .section { padding: 16px 20px 6px; }
             .footer { padding: 14px 20px; margin-top: 16px; }
             .divider { margin: 0 20px; }
+
+            .pdf-break {
+                page-break-before: always;
+                break-before: page;
+            }
+
+            .pdf-break ~ .divider,
+            .divider + .section.pdf-break,
+            .divider + div + .section.pdf-break {
+                border-top: none;
+            }
+
+            .section {
+                break-inside: auto;
+            }
+
+            .section-title + .product {
+                break-before: avoid;
+                page-break-before: avoid;
+            }
         }
     </style>
 </head>
@@ -490,7 +510,7 @@
         <div class="divider"></div>
 
         <!-- FORNI DA INCASSO -->
-        <div class="section">
+        <div class="section pdf-break">
             <div class="section-title">Forni da Incasso</div>
 
             <div class="product">
@@ -665,18 +685,6 @@
 
             <div class="product">
                 <div class="product-img-wrap">
-                    <img class="product-img" src="img_MKMW3825PRBK.jpg" alt="MKMW 3825-PR BK">
-                </div>
-                <div class="product-info">
-                    <div class="product-code">MKMW 3825-PR BK</div>
-                    <div class="product-desc">Microonde da Incasso Vetro Nero, 25L, 900W, Grill 1200W, Touch, Prime</div>
-                    <div class="product-qty">3 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>170<span class="decimals">,00</span></div>
-            </div>
-
-            <div class="product">
-                <div class="product-img-wrap">
                     <img class="product-img" src="img_MKMW3825PRXS.jpg" alt="MKMW 3825-PR XS">
                 </div>
                 <div class="product-info">
@@ -707,18 +715,6 @@
             <div class="section-title">Lavastoviglie da Incasso</div>
 
 
-
-            <div class="product">
-                <div class="product-img-wrap">
-                    <img class="product-img" src="img_MKDWFI60514.jpg" alt="MKDW FI60514 ESL">
-                </div>
-                <div class="product-info">
-                    <div class="product-code">MKDW FI60514 ESL</div>
-                    <div class="product-desc">Lavastoviglie da Incasso 60 cm, 14 coperti, Scomparsa totale, Classe E</div>
-                    <div class="product-qty">3 pz disponibili</div>
-                </div>
-                <div class="product-price"><span class="euro">&euro;</span>180<span class="decimals">,00</span></div>
-            </div>
 
             <div class="product">
                 <div class="product-img-wrap">
